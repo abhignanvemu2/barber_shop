@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SectionHeading from '../components/Heading';
 import ReviewCard from '@/components/Card';
-import BeardCut from "../assets/Images/beardcut.jpg";
+import BeardCut from "../assets/Images/beardCut.jpg";
 import HairCut from "../assets/Images/haircut.jpg";
 import Premium from "../assets/Images/premium.jpg";
 import Animation from '@/components/Animation';
