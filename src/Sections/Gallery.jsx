@@ -42,8 +42,8 @@ const Gallery = () => {
   return (
     <div
       ref={sectionRef}
-      className="bg-black pt-24 text-white relative"
-      id="services"
+      className="dark:bg-black pt-24 text-white relative"
+      id="gallery"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="py-24 text-white">

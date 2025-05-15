@@ -4,6 +4,7 @@ import ReviewCard from '@/components/Card';
 import BeardCut from "../assets/Images/beardcut.jpg";
 import HairCut from "../assets/Images/haircut.jpg";
 import Premium from "../assets/Images/premium.jpg";
+import Animation from '@/components/Animation';
 
 const services = [
   {
@@ -52,7 +53,7 @@ const Services = () => {
   return (
     <div
       ref={sectionRef}
-      className="bg-black pt-24 text-white relative h-1/2"
+      className="dark:bg-black  pt-24 text-white relative h-1/2"
       id="services"
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -60,38 +61,12 @@ const Services = () => {
           <SectionHeading title="SERVICES" />
         </div>
     {/* Paragraph content */}
-    <p className="relative z-10 text-2xl leading-10 pb-12">
+    <p className="relative z-10 text-2xl leading-10 pb-12 dark:text-white text-black">
       Professional barbering services to keep you looking sharp <br />
       for everyday confidence or special occasions.
     </p>
- <div className="relative text-center pt-24">
-  {/* Animated Sparkle SVG */}
-  <svg
-    className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-10"
-    viewBox="0 0 512 512"
-    fill="#D9E300"
-    style={{
-      animation: 'scalePulse 2s ease-in-out infinite',
-    }}
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M256 0C277 106 406 139 512 160C406 181 277 215 256 320C235 215 106 181 0 160C106 139 235 106 256 0Z" />
-  </svg>
-
-
-  {/* Animation keyframes */}
-  <style jsx>{`
-    @keyframes scalePulse {
-      0%, 100% {
-        transform: translateX(-50%) scale(1);
-      }
-      50% {
-        transform: translateX(-50%) scale(1.5);
-      }
-    }
-  `}</style>
-</div>
- <div className="flex flex-col md:flex-row  justify-between gap-10 px-6 md:px-24 h-full py-12 items-center">
+ <Animation/>
+ <div className="flex flex-col lg:flex-row justify-between gap-10 xl:px-24 h-full py-12 items-center">
           {services.map((service, index) => (
             <div
               key={index}

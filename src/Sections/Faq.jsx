@@ -50,7 +50,7 @@ const Faq = () => {
   return (
     <div
       ref={sectionRef}
-      className="bg-black pt-24 text-white relative h-1/2"
+      className="dark:bg-black pt-24 text-white relative h-1/2"
       id="services"
     >
       <div className="container mx-auto px-4 md:px-6">

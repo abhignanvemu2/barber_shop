@@ -55,7 +55,7 @@ const Testimonals = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="bg-black pt-12 text-white relative overflow-hidden"
+      className="dark:bg-black pt-12 text-white relative overflow-hidden"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="py-24">

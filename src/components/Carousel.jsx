@@ -63,8 +63,8 @@ export function TestimonialCarousel({ testimonials }) {
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className={"dark:text-white text-black "}/>
+            <CarouselNext className={"dark:text-white text-black "} />
         </Carousel>
     )
 }

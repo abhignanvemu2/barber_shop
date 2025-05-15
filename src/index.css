@@ -188,12 +188,19 @@ html {
   scroll-behavior: smooth;
 }
 
-.bg-primary {
-  background-color: #E0F11F
-}
+  .bg-primary {
+    background-color: #1F67F1
+  }
 
-.text-primary {
-  color: #E0F11F
+  .text-primary {
+    color: #1F67F1
+  }
+
+.dark .bg-primary {
+  background-color: #E0F11F; /* Dark mode */
+}
+.dark .text-primary {
+  color: #E0F11F;
 }
 
 

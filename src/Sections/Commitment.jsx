@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SectionHeading from '../components/Heading';
+import Animation from '@/components/Animation';
 
 const cardData = [
   {
@@ -47,7 +48,7 @@ const Commitment = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="bg-black pt-12 text-white relative overflow-hidden"
+      className="dark:bg-black  pt-12 text-white relative overflow-hidden"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="py-24">
@@ -58,33 +59,7 @@ const Commitment = () => {
     <p className="relative z-10 text-2xl leading-10 pb-12">
      What makes us the premier barbershop in Denton, TX.
     </p>
- <div className="relative text-center pt-24">
-  {/* Animated Sparkle SVG */}
-  <svg
-    className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-10"
-    viewBox="0 0 512 512"
-    fill="#D9E300"
-    style={{
-      animation: 'scalePulse 2s ease-in-out infinite',
-    }}
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M256 0C277 106 406 139 512 160C406 181 277 215 256 320C235 215 106 181 0 160C106 139 235 106 256 0Z" />
-  </svg>
-
-
-  {/* Animation keyframes */}
-  <style jsx>{`
-    @keyframes scalePulse {
-      0%, 100% {
-        transform: translateX(-50%) scale(1);
-      }
-      50% {
-        transform: translateX(-50%) scale(1.5);
-      }
-    }
-  `}</style>
-</div>
+ <Animation/>
         <div
           className={`flex flex-col md:flex-row justify-between gap-10 transition-all duration-1000 transform ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -95,13 +70,13 @@ const Commitment = () => {
               key={index}
               className="rounded-lg p-6 text-black cursor-pointer bg-primary transition hover:scale-[1.02] duration-300 text-left"
             >
-              <h1 className="font-semibold font-primary text-4xl big-shoulders text-gray-400">
+              <h1 className="font-semibold font-primary text-4xl big-shoulders dark:text-gray-400 text-white">
                 {title}
               </h1>
-              <h3 className="font-semibold font-secondary text-2xl py-2">
+              <h3 className="font-semibold dark:text-gray-700 text-gray-100 text-2xl py-2">
                 {subtitle}
               </h3>
-              <p className="text-lg dm-sans">{description}</p>
+              <p className="text-lg dm-sans dark:text-black text-gray-900">{description}</p>
             </div>
           ))}
         </div>

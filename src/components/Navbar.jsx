@@ -42,12 +42,12 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links (Desktop) */}
-          <div className="hidden md:flex space-x-4">
-            <a className="text-md hover:text-primary" href="#home">Home</a>
-            <a className="text-md hover:text-primary" href="#about">About</a>
-            <a className="text-md hover:text-primary" href="#services">Services</a>
-            <a className="text-md hover:text-primary" href="#gallery">Gallery</a>
-            <a className="text-md hover:text-primary" href="#contact">Contact</a>
+          <div className="hidden md:flex space-x-4 text-white">
+            <a className="text-md hover:text-[#1F67F1] dark:hover:text-[#E0F11F]" href="#home">Home</a>
+            <a className="text-md hover:text-[#1F67F1] dark:hover:text-[#E0F11F]" href="#about">About</a>
+            <a className="text-md hover:text-[#1F67F1] dark:hover:text-[#E0F11F]" href="#services">Services</a>
+            <a className="text-md hover:text-[#1F67F1] dark:hover:text-[#E0F11F]" href="#gallery">Gallery</a>
+            <a className="text-md hover:text-[#1F67F1] dark:hover:text-[#E0F11F]" href="#contact">Contact</a>
           </div>
 
           {/* Mobile Menu (Toggle visibility) */}
@@ -71,7 +71,9 @@ const Navbar = () => {
 
           <div className="flex items-center pr-3 md:pr-0">
             <ThemeChange />
-            <button className="bg-gray-500 cursor-pointer text-primary px-4 py-1 rounded-full ml-4 dm-sans ">
+            <button className="bg-gray-500 cursor-pointer text-primary px-4 py-1 rounded-full ml-4 dm-sans" onClick={() => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  }}>
               DM ME
             </button>
             
