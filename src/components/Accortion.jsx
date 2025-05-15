@@ -34,12 +34,12 @@ const faqs = [
 export function AccordionDemo() {
   return (
     <section className=" mx-auto p-6 dm-sans">
-      <h2 className="text-2xl font-bold mb-6 text-center">FAQs</h2>
-      <Accordion type="single" collapsible className="w-full text-gray-500">
+      <h2 className="text-2xl font-bold mb-6 text-center text-black dark:text-white">FAQs</h2>
+      <Accordion type="single" collapsible className="w-full text-gray-900 dark:text-gray-500">
         {faqs.map((item, index) => (
           <AccordionItem value={`item-${index + 1}`} key={index}>
             <AccordionTrigger className={"text-xl"}>{item.question}</AccordionTrigger>
-            <AccordionContent className={"text-left text-gray-100"}>{item.answer}</AccordionContent>
+            <AccordionContent className={"text-left text-gray-700 dark:text-gray-100"}>{item.answer}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>

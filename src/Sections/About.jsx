@@ -28,7 +28,7 @@ const About = () => {
     }, []);
 
     return (
-        <div ref={sectionRef} className="bg-black pt-24 text-white relative" id="about">
+        <div ref={sectionRef} className="dark:bg-black  pt-24 text-white relative" id="about">
             <div className="container mx-auto px-4 md:px-6 transition-all duration-1000 ease-in-out">
                 <div className="py-24 text-white relative">
                     <div className="container mx-auto">
@@ -41,12 +41,12 @@ const About = () => {
                         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}
                 >
-                    <p className="text-2xl max-w-lg text-left text-[#F0F0F080] leading-10">
+                    <p className="text-2xl max-w-lg text-left text-gray-500 dark:text-[#F0F0F080]  leading-10">
                         Welcome to Fama Barber Shop & Beauty Salon! We are dedicated to providing you
                         with the best grooming and beauty services in town. Our team of experienced
                         professionals is here to ensure you look and feel your best.
                     </p>
-                    <p className="text-2xl max-w-lg text-left leading-10">
+                    <p className="text-2xl dark:text-white text-black max-w-lg text-left leading-10">
                         We take pride in our attention to detail and personalized service, ensuring
                         each client leaves looking and feeling their best. Our skilled barbers
                         combine traditional techniques with modern trends to create custom styles

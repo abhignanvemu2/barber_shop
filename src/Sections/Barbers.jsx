@@ -49,7 +49,7 @@ const Barbers = () => {
   return (
     <div
       ref={sectionRef}
-      className="bg-black pt-24 text-white relative h-1/2"
+      className="dark:bg-black pt-24 text-white relative h-1/2"
       id="services"
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -58,7 +58,7 @@ const Barbers = () => {
         </div>
    
  
- <div className="flex flex-col md:flex-row  justify-between gap-10 px-6 md:px-24 h-full py-12 items-center">
+ <div className="flex flex-col lg:flex-row  justify-between gap-10 xl:px-24 h-full py-12 items-center">
           {services.map((service, index) => (
             <div
               key={index}

@@ -50,7 +50,7 @@ const Location = () => {
   return (
     <div
       ref={sectionRef}
-      className="bg-black pt-24 text-white relative h-1/2"
+      className="dark:bg-black pt-24 text-white relative h-1/2"
       id="services"
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -76,13 +76,13 @@ const Location = () => {
 
       {/* Address and Open Link */}
       <div className="flex flex-col md:flex-row justify-between items-start gap-4">
-        <div className="flex items-center gap-2 text-lg text-white">
+        <div className="flex items-center gap-2 text-lg  text-gray-800 dark:text-white">
           <MapPin className="text-primary" />
-          <span>{address}</span>
+          <span className='font-medium'>{address}</span>
         </div>
-        <div className='flex font-bold justify-center items-center gap-2 text-lg text-white'>
+        <div className='flex font-bold justify-center items-center gap-2 text-lg  text-gray-800 dark:text-white'>
 
-          <Phone className="text-primary " /> +1 940-612-9127
+          <Phone className="text-primary " /> <p className='font-medium'>+1 940-612-9127</p>
         </div>
         <a
           href={mapsLink}

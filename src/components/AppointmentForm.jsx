@@ -16,33 +16,31 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitted:", form);
-    // You can integrate with EmailJS, Formspree, or your backend
+    // Integrate with EmailJS, Formspree, or your backend
   };
 
   return (
-    <div className="bg-black text-white px-8 py-16 md:flex md:justify-between md:items-start space-y-8 md:space-y-0">
+    <div className="dark:bg-black text-white px-6 py-12 md:py-16 md:px-16 flex flex-col md:flex-row justify-between items-start space-y-10 md:space-y-0 md:space-x-8">
       {/* Left Side */}
-      <div className="md:w-1/2 text-left">
-        <h2 className="text-lg font-semibold mb-4 pr-24">
+      <div className="md:w-1/2">
+        <h2 className="text-xl font-semibold mb-4 text-left text-black dark:text-white">
           Ready for a fresh look? Book your appointment today or contact us for any questions.
         </h2>
-        <div className="flex text-center pb-2">
-          <MapPin className="text-primary text-center mt-1 mr-2" />
-        <p className="mb-2 font-medium text-gray-500">518 Acme St unit 101, Denton, TX 76205, United States</p>
+        <div className="flex items-start mb-3">
+          <MapPin className="text-primary mr-3 mt-1" />
+          <p className="text-gray-400">
+            518 Acme St unit 101, Denton, TX 76205, United States
+          </p>
         </div>
-        <div className="flex text-center">
-          <Phone className="text-primary text-center mt-1 mr-2" />
-        <p className=" text-lg">+1 940-808-1569</p>
-
+        <div className="flex items-center text-black dark:text-white">
+          <Phone className="text-primary mr-3" />
+          <p className="text-lg font-medium">+1 940-808-1569</p>
         </div>
       </div>
 
       {/* Right Side Form */}
-      <form
-        onSubmit={handleSubmit}
-        className="md:w-1/2 flex flex-col space-y-4"
-      >
-        <div className="flex gap-4">
+      <form onSubmit={handleSubmit} className="md:w-1/2 w-full flex flex-col space-y-4">
+        <div className="flex flex-col sm:flex-row gap-4">
           <input
             type="text"
             name="name"
@@ -50,16 +48,16 @@ const ContactSection = () => {
             value={form.name}
             onChange={handleChange}
             required
-            className="flex-1 p-3 bg-[#1e1e1e] text-white rounded"
+            className="flex-1 p-3 dark:bg-[#1e1e1e] bg-gray-300  rounded"
           />
           <input
-            type="number"
+            type="tel"
             name="number"
             placeholder="000-000-0000"
-            value={form.email}
+            value={form.number}
             onChange={handleChange}
             required
-            className="flex-1 p-3 bg-[#1e1e1e] text-white rounded"
+            className="flex-1 p-3 dark:bg-[#1e1e1e] bg-gray-300 rounded"
           />
         </div>
         <textarea
@@ -69,11 +67,11 @@ const ContactSection = () => {
           onChange={handleChange}
           required
           rows="5"
-          className="p-3 bg-[#1e1e1e] text-white rounded"
+          className="p-3 dark:bg-[#1e1e1e] bg-gray-300 rounded"
         />
         <button
           type="submit"
-          className="bg-primary text-black font-medium py-3 rounded hover:opacity-90 transition"
+          className="bg-primary text-white dark:text-black  font-semibold py-3 rounded hover:opacity-90 transition"
         >
           Send
         </button>
